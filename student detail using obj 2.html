@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+
+<body>
+
+<script>
+
+    // Constructor Function
+    function Student(id, name, city) {
+        this.id = id;
+        this.name = name;
+        this.city = city;
+
+        this.intro = function() {
+            console.log("My name is " + this.name);
+            console.log("My ID is " + this.id);
+            console.log("My city is " + this.city);
+        };
+    }
+
+    
+    let st1 = new Student(11, "Mukul", "Rajput");
+    let st2 = new Student(101, "Vikas", "Ghaziabad");
+
+  
+    st1.intro();
+    st2.intro();
+
+
+   
+    class StudentClass {
+
+        constructor(id, name, city) {
+            this.id = id;
+            this.name = name;
+            this.city = city;
+        }
+
+        intro() {
+            console.log("Name:", this.name);
+            console.log("ID:", this.id);
+            console.log("City:", this.city);
+        }
+    }
+
+   
+    let s1 = new StudentClass(1, "Rahul", "Delhi");
+    let s2 = new StudentClass(2, "Aman", "Noida");
+
+    s1.intro();
+    s2.intro();
+
+</script>
+
+</body>
+</html>
