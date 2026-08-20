@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student registation form</title>
+</head>
+<body>
+ 
+
+    <h2>Student Registration Form</h2>
+
+    <form id="studentForm">
+
+        <label>Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" id="email">
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" id="age">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <br><br>
+
+        <label>Course:</label>
+        <select id="course">
+            <option value="">Select Course</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="BCA">BCA</option>
+            <option value="MCA">MCA</option>
+        </select>
+        <br><br>
+
+        <label>Phone:</label>
+        <input type="text" id="phone">
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+
+        document.getElementById("studentForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let age = document.getElementById("age").value;
+            let phone = document.getElementById("phone").value;
+            let course = document.getElementById("course").value;
+
+            let gender = document.querySelector(
+                'input[name="gender"]:checked'
+            );
+
+            if (name === "") {
+                alert("Please enter your name");
+                return;
+            }
+
+            if (email === "") {
+                alert("Please enter your email");
+                return;
+            }
+
+            if (age === "") {
+                alert("Please enter your age");
+                return;
+            }
+
+            if (!gender) {
+                alert("Please select gender");
+                return;
+            }
+
+            if (course === "") {
+                alert("Please select course");
+                return;
+            }
+
+            if (phone.length !== 10) {
+                alert("Phone number must be 10 digits");
+                return;
+            }
+
+            document.getElementById("message").innerHTML =
+                "Registration Successful!";
+
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Age:", age);
+            console.log("Gender:", gender.value);
+            console.log("Course:", course);
+            console.log("Phone:", phone);
+
+        });
+
+    </script>
+
+
+</body>
+</html>
