@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest operator</title>
+</head>
+<body>
+    <script>
+
+
+    // ex 1
+
+    function sum(...values){
+        let total = 0;
+
+        for(let n of values) {
+            total = total + n;
+        }
+
+        console.log(total);
+    }
+
+    sum(10, 20);
+    sum(12, 45, 67);
+
+
+    // ex 2
+
+    function sumWithName(name, ...values){
+        let total = 0;
+
+        for(let n of values) {
+            total = total + n;
+        }
+
+        console.log(name);
+        console.log(total);
+    }
+
+    sumWithName("mukul", 10, 20);
+
+
+    // ex 3
+
+    function userInfo(first, last, ...values){
+        let total = 0;
+
+        for(let n of values) {
+            total = total + n;
+        }
+
+        console.log(total);
+        console.log(first);
+        console.log(last);
+    }
+
+    userInfo("mukul", "rajput", 10, 20);
+
+</script>
+
+</body>
+</html>
