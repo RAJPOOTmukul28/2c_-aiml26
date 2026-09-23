@@ -1,0 +1,35 @@
+<script>
+    class Student {
+
+        static totalstudents = 0;
+
+        constructor(rollno, name, marks) {
+            this.rollno = rollno;
+            this.name = name;
+            this.marks = marks;
+
+            Student.totalstudents++;
+        }
+
+        displayResult() {
+            console.log("Student details");
+            console.log("Rollno:", this.rollno);
+            console.log("Name:", this.name);
+            console.log("Marks:", this.marks);
+
+            if (this.marks > 89) {
+                console.log("Pass");
+            } else {
+                console.log("Fail");
+            }
+        }
+    }
+
+    let s1 = new Student(81, "mukul", 45);
+    let s2 = new Student(34, "kanik", 65);
+
+    s1.displayResult();
+    s2.displayResult();
+
+    console.log("Total students:", Student.totalstudents);
+</script>
