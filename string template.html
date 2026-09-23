@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        let firstName="Mukul";
+        let lastName="rajpoot";
+        let fullName=`My name is ${firstName} ${lastName}`;
+        console.log(fullName);
+        function getFullName(firstName,lastName)
+        {
+            return `My name is ${firstName} ${lastName}`;
+        }
+        console.log(getFullName("John", "Doe"));
+    </script>
+</body>
+</html>
